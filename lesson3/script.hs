@@ -35,7 +35,16 @@ doubleDoubleOne x = dubs*2
 --function with lambda
 doubleDoubleTwo x = (\dubs -> dubs*2) x*2
 
-
+--return 4 because the final let is returned
+overrite1 x = let x = 2
+             in 
+               let x = 3
+               in
+                 let x = 4
+                 in 
+                   x
+--return 4 because the inner most function is return
+overrite2 x = (\x -> (\x -> (\x -> x)4 )3)2
 
 main = do
     print x

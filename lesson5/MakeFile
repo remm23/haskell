@@ -1,0 +1,4 @@
+clean:
+	@echo "clean project"
+	del *.exe *.hi *o *.hs~ *.un~ *~
+	@echo "clean complete"
